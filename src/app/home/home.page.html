@@ -1,20 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-input label="Digite um número" labelPlacement="floating" placeholder="Digite um número qualquer" [(ngModel)]="n1" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Digite outro número" labelPlacement="floating" placeholder="Digite um número qualquer" [(ngModel)]="n2" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="somar()">somar</ion-button>
+  <ion-button expand="block" (click)="subtrair()">subtrair</ion-button>
+  <ion-button expand="block" (click)="multiplicar()">multiplicar</ion-button>
+  <ion-button expand="block" (click)="dividir()">dividir</ion-button>
+
+    <ion-label>{{res}}</ion-label>
+
+
+    <p>Exercício 1</p>
+  <ion-item>
+    <ion-input label="Digite um número em pés" labelPlacement="floating" placeholder="Digite um número para converter em quilómetros" [(ngModel)]="pes" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="converter()">Converter</ion-button>
+
+    <ion-label>{{km}}</ion-label>
+
+
+    <p>Exercício 2</p>
+    <ion-item>
+      <ion-input label="Digite sua idade" labelPlacement="floating" [(ngModel)]="idade" type="number"></ion-input>
+
+    </ion-item>
+    <ion-button expand="block" (click)="clas()">Converter</ion-button>
+
+    <ion-label>{{mensagem}}</ion-label>
 </ion-content>
