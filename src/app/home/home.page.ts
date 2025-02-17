@@ -44,8 +44,8 @@ export class HomePage {
     this.km=this.pes*0.0003048;
   }
 
-  mensagem="";
   idade=0;
+  mensagem="";
 
   clas(){
     if(this.idade<=0){
